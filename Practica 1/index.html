@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>WFC Wellness Fitness Center</title>
+    <link rel="stylesheet" type="text/css" href="index.css"/>
+    <!-- Load font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <header>
+        <section class="logo">
+          <a href="index.html" class="logo">
+            <figure>
+              <img src="logo-web.png" alt="logo" width="300" height="100"/>
+            </figure>
+          </a>
+        </section>
+        <section class="title">
+          <a class="titulo" href="#home"><h1>WFC Wellness Fitness Center</h1></a>
+        </section>
+        <section class="log-in">
+            <form action="procesar.php" method="post">
+
+                <label for="usuario">Usuario:</label>
+                <input type="text" id="usuario" name="usuario"/></br>
+
+
+                <label for="passw">Contraseña:</label>
+                <input type="password" id="passw" name="passwd"/></br>
+
+
+              <a href="index2.html">
+                <input type="button" id="login" value="Log in"/>
+              </a>
+              <input type="reset" id="limpiar" value="Reset"/>
+            </form>
+        </section>
+    </header>
+
+    <section>
+        <nav class="topnav">
+              <a class="active" href="#home">Inicio</a>
+              <a href="#activities">Actividades</a>
+              <a href="#timetable">Horario</a>
+              <a href="#technics">Técnicos</a>
+              <a href="#places">Instalaciones y servicios</a>
+              <a href="#location">Localización</a>
+              <a href="#fees">Precios y promociones</a>
+              <a href="#signup">Alta de usuario</a>
+              <a href="#forum">Foro</a>
+        </nav>
+    </section>
+
+    <table class="tabla-body">
+      <tbody>
+        <td>
+          <figure>
+            <img src="foto2.jpeg" width="550" height="600"/>
+          </figure>
+        </td>
+
+        <td>
+          <figure>
+            <img src="foto1.jpeg" width="500" height="500"/>
+          </figure>
+        </td>
+      </tbody>
+    </table>
+
+    <!-- The social media icon bar -->
+    <section class="icon-bar">
+     <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+     <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+     <a href="#" class="google"><i class="fa fa-google"></i></a>
+     <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+     <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+   </section>
+    <section>
+      <footer>
+        <a href="../como_se_hizo.pdf">Cómo se hizo</a>
+      </footer>
+    </section>
+  </body>
+
+</html>
