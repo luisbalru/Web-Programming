@@ -1,3 +1,19 @@
+@font-face {
+    font-family: Fuente1;
+    src: url('./Fonts/ostrichroundedwebfont.woff');
+    font-weight: bold;
+}
+
+@font-face {
+  font-family: Fuente2;
+  src:url('./Fonts/SansationLight.woff');
+}
+
+@font-face {
+  font-family: Fuente3;
+  src:url('./Fonts/JustusItalic.woff');
+}
+
 header{
   display: flex;
   overflow: hidden;
@@ -15,16 +31,45 @@ body{
   font-weight: bold;
 }
 
-.title{
+.titulo{
+  font-family: Fuente1;
   width=40%
   float:left;
-  font-size: 31px;
+  font-size: 40px;
   text-align: center;
-  font-style: italic;
   color: #000066;
-  font-weight: bold;
 }
 
+#foto1{
+    position: relative;
+    text-align: center;
+}
+
+.texto1{
+    font-family: Fuente3;
+    color: white;
+    position: absolute;
+    font-size: 25px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#foto2{
+  position: relative;
+  text-align: center;
+}
+
+
+.texto2{
+  font-family: Fuente3;
+  color: white;
+  position: absolute;
+  font-size: 19px;
+  top: 70%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
 
 .log-in{
   width=40%;
@@ -34,6 +79,7 @@ body{
 
 /* Add a black background color to the top navigation */
 .topnav {
+   font-family: Fuente2;
    clear: both;
    background-color: #333;
    overflow: hidden;
@@ -41,6 +87,7 @@ body{
 
 /* Style the links inside the navigation bar */
 .topnav a {
+    /*font-family: Fuente2;*/
    float: left;
    color: #f2f2f2;
    text-align: center;
