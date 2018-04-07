@@ -16,7 +16,7 @@
 
 .cuerpo{
   display: flex;
-  height:45%;
+  height:500px;
 }
 
 h2{
@@ -35,6 +35,7 @@ h2{
 }
 
 .split-right{
+  background-image: url(back.jpg);
   font-family: Fuente3;
   flex-direction: column;
   justify-content: right;
@@ -45,9 +46,9 @@ h2{
 .centered{
   border: 2px solid #ccc;
   background-color: #eee;
-  border-radius: 5px;
-  padding: 16px;
-  margin: 16px 0
+  border-radius: 5%;
+  padding: 1%;
+  margin: 5% 0;
 }
 
 .centered::after {
@@ -58,13 +59,13 @@ h2{
 
 .centered img {
   float: left;
-  margin-right: 20px;
+  margin-right: 6%;
   border-radius: 50%;
 }
 
 .centered span {
-  font-size: 20px;
-  margin-right: 15px;
+  font-size: 6%;
+  margin-right: 5%;
 }
 
 @media (max-width: 500px) {
