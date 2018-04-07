@@ -16,8 +16,7 @@
 
 .cuerpo{
   display: flex;
-  height: 500px;
-  width: 1600px;
+  height:45%;
 }
 
 h2{
@@ -37,7 +36,6 @@ h2{
 
 .split-right{
   font-family: Fuente3;
-  background: lightblue url("back.jpg");
   flex-direction: column;
   justify-content: right;
   flex:1;
