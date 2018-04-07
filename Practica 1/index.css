@@ -25,57 +25,24 @@ body{
 }
 
 .logo{
-  width=10%
-  float:left;
-  font-size: 20px;
   font-weight: bold;
 }
 
 .titulo{
   font-family: Fuente1;
-  width=40%
   float:left;
   font-size: 40px;
   text-align: center;
   color: #000066;
 }
 
-/*#foto1{
-    position: relative;
-    text-align: center;
-}
-
-.texto1{
-    font-family: Fuente3;
-    color: white;
-    position: absolute;
-    font-size: 25px;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-#foto2{
-  position: relative;
-  text-align: center;
-}
-
-
-.texto2{
-  font-family: Fuente3;
-  color: white;
-  position: absolute;
-  font-size: 19px;
-  top: 70%;
-  left: 40%;
-  transform: translate(-50%, -50%);
-}*/
-
-
 .log-in{
-  width=40%;
 
   text-align:right;
+}
+
+.logeado{
+  text-align: left;
 }
 
 /* Add a black background color to the top navigation */
@@ -109,9 +76,6 @@ body{
    color: white;
 }
 
-.tabla-body{
-
-}
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
@@ -139,26 +103,21 @@ body{
 
 /* Barra de redes sociales*/
 /* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
-.icon-bar {
- position: fixed;
- top: 50%;
- -webkit-transform: translateY(-50%);
- -ms-transform: translateY(-50%);
- transform: translateY(-50%);
+.icon {
 }
 
-/* Style the icon bar links */
-.icon-bar a {
- display: block;
- text-align: center;
- padding: 10px;
- transition: all 0.3s ease;
- color: white;
- font-size: 25px;
+.icon a{
+  display: block;
+  text-align: center;
+  padding: 10px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 25px;
 }
+
 
 /* Style the social media icons with color, if you want */
-.icon-bar a:hover {
+.icon a:hover {
  background-color: #000;
 }
 
@@ -192,7 +151,6 @@ footer{
   position: relative;
   bottom: 0;
   width: 100%;
-
-  height: 50px;
+  text-align: center;
   color: black;
 }

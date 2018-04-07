@@ -1,0 +1,11 @@
+.flex{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  text-align: center;
+}
+
+.actividades{
+  overflow: scroll;
+}
