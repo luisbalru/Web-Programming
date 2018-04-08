@@ -1,0 +1,24 @@
+#horario {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    text-align: center;
+    width: 100%;
+}
+
+#horario td, #horario th {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#horario tr:nth-child(even){background-color: #f2f2f2;}
+
+#horario tr:hover {background-color: #ddd;}
+
+#horario th {
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #127EB2;
+    color: white;
+}
