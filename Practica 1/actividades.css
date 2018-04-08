@@ -16,7 +16,7 @@
 
 .cuerpo{
   display: flex;
-  height:500px;
+  height:450px;
 }
 
 h2{
@@ -36,6 +36,8 @@ h2{
 
 .split-right{
   background-image: url(back.jpg);
+  background-repeat:no-repeat
+  background-position:center;
   font-family: Fuente3;
   flex-direction: column;
   justify-content: right;
@@ -68,7 +70,29 @@ h2{
   margin-right: 5%;
 }
 
+@media (max-width:720px) {
+  h2{
+    font-size: 80%;
+  }
+}
+
 @media (max-width: 500px) {
+  .logo img{
+    margin: auto;
+    float: none;
+    display: block;
+  }
+
+  .titulo{
+    font-size: 50%;
+  }
+
+  .split-right img{
+    margin: auto;
+    float: none;
+    display: block;
+  }
+
   .centered {
       text-align: center;
   }
