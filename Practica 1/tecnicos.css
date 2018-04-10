@@ -6,6 +6,7 @@
 
 .tecnicos img{
 	height: 200px;
+	border: 1px solid #efab70;
 }
 
 .tecnicos {
@@ -23,7 +24,7 @@
   	margin: 2%;
   	margin-top:1%;
   	padding: 1%;
-    background-color: #F25E09;
+    background-color: #6592E8;
 }
 
 .tecnicos > li h3 {
