@@ -1,0 +1,9 @@
+@font-face {
+  font-family: Fuente2;
+  src:url('./Fonts/SansationLight.woff');
+}
+
+h2{
+  font-family: Fuente2;
+  color: #1DFF15;
+}
