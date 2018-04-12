@@ -3,6 +3,10 @@
   src:url('./Fonts/JustusItalic.woff');
 }
 
+body{
+  background-image: url(back3.jpeg);
+}
+
 
 .tecnicos img{
 	height: 200px;

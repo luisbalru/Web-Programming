@@ -3,7 +3,21 @@
   src:url('./Fonts/SansationLight.woff');
 }
 
-h2{
+iframe{
+  width: 45%;
+}
+
+.address{
+  width: 55%;
+  float: left;
+  text-align: center;
+  font-weight: bold;
   font-family: Fuente2;
-  color: #1DFF15;
+  font-size: 20px;
+  color: #001433;
+}
+
+body{
+  background-image: url(back4_opt.jpg);
+  background-repeat: no-repeat;
 }
