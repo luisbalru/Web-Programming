@@ -78,7 +78,7 @@ img{
 
 @media screen and (max-width: 720px){
   .titulo{
-    font-size:220%;
+    font-size:200%;
   }
   .logeado{
     font-size:50%;
@@ -92,7 +92,8 @@ img{
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
- .topnav a:not(:first-child) {display: none;}
+ .topnav {display: inline-block;
+            font-size: 12px;}
  .topnav a.icon {
    float: right;
    display: block;
@@ -108,9 +109,6 @@ img{
 
 /* Barra de redes sociales*/
 /* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
-.icon {
-}
-
 .icon a{
   display: block;
   text-align: center;
