@@ -1,0 +1,96 @@
+\input{preambuloSimple.tex}
+
+%----------------------------------------------------------------------------------------
+%	TÍTULO Y DATOS DEL ALUMNO
+%----------------------------------------------------------------------------------------
+
+\title{	
+\normalfont \normalsize 
+\textsc{\textbf{Programación Web (2018)} \\ Doble Grado en Ingeniería Informática y Matemáticas \\ Universidad de Granada} \\ [25pt] % Your university, school and/or department name(s)
+\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+\huge Memoria Práctica 1: HTML5 y CSS3 \\ % The assignment title
+\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+
+\author{Luis Balderas Ruiz} % Nombre y apellidos
+
+\date{\normalsize\today} % Incluye la fecha actual
+
+%----------------------------------------------------------------------------------------
+% DOCUMENTO
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle 
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section{Introducción}
+
+La presente memoria tiene como objetivo esclarecer y/o justificar el diseño y desarrollo de la página web sobre un gimnasio propuesta, utilizando únicamente HTML5 y CSS3. Dicho desarrollo se ha nutrido, por un lado, de los conocimiento brindados en clase, reflejados en \cite{html5} y \cite{css}. Por otro lado, he realizado un gran trabajo autodidacta por medio de los tutoriales, guías y ejemplos alojados en \cite{w3sh} y \cite{w3sc}. Todos ellos han resultado verdaderamente útiles en la incorporación de novedades externas a lo explicado en clase. He de reconocer que poco hay que añadir a lo explicado de HTML5, así que la variedad nace en la combinación, exploración y manipulación de las hojas de estilo. \\
+
+Este documento, dividido en secciones, hace un barrido por cada una de las páginas y acaba con unas breves reflexiones extraídas a la luz del desarrollo de la práctica. Dos espinitas he llevo de esta práctica: por un lado, entregar un footer rudimentario y, por otra, no haber conseguido que funcione el menú responsive con la famosa "hamburguesa". Por más que lo he intentado, no ha llegado a funcionar correctamente.
+ 
+\section{Inicio}
+
+La página de inicio o portada de la web está alojada en los archivos \textit{index.html} e \textit{index2.html}, páginas previas y posterior a la autenticación del usuario, respectivamente. El diseño de la cabecera, menú y pie de página se mantiene en toda la website, para proporcionarle una experiencia más familiar y sencilla al posible usuario. La cabecera, dividida en tres partes, contiene el logo, el título y el login (donde se requiere un usuario y contraseña). He añadido, a la derecha del login, unos iconos de redes sociales. Dichos iconos se fundamentan a través de una hoja de estilos externa (\textit{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css}) y unos pequeños ajustes incluídos en mi propio \textit{index.css} para que tengan la apariencia y tamaño deseado. He introducido ciertas comprobaciones en el tamaño de la pantalla para conseguir que la página sea, al menos parcialmente, responsive. \\
+
+El cuerpo de la página está formado por un menú, utilizando la etiqueta de HTML5 \textit{nav}, y a continuación, un slider de 4 imágenes con frases motivadoras en movimiento. A pesar de que en general esto se suele hacer con JavaScript, he conseguido llevarlo a cabo, con un gran esfuerzo y muchas líneas de código, con CSS. Ese desarrollo se encuentra en \textit{slider-def.css}. La única novedad se da en las animaciones, por medio de los @keyframes y @webkit. Además, incluyo una fuente distinta, para darle más vistosidad.
+
+El pie de página es verdaderamente rudimentario, pero no he conseguido nada vistoso que me convenciera, así que lo he hecho totalmente funcional: enlace a \textit{como-se-hizo.pdf} y contacto mediante una referencia a \textit{mailto:}.
+
+\section{Actividades}
+
+Se pedía que la página de Actividades, alojada en \textit{actividades.html}, fuera responsive. Para conseguirlo, he dividido el cuerpo en dos partes: a la izquierda, todas las actividades que se proponen en el centro deportivo (las clases split-left y split-right en \textit{actividades.css}, con distintas fuentes y configuraciones). Dichas actividades están listadas y encapsuladas en cajas para darle un bonito estilo. La parte derecha es la de noticias, con una imagen de fondo. En el caso de que el tamaño de la pantalla se reduzca, los tamaños de los elementos para que sea visible en pantallas más pequeñas. Hago una primera distinción a 720px, reduciendo las fuentes de las etiquetas \textit{h2}, y luego a 500px, donde ya sí reduzco imágenes, el título de la página, el logo y las cajas de actividades.
+
+\section{Horario}
+
+El horario de un centro deportivo \textit{horario.html} es un ejemplo claro de aplicación de tablas estudiadas en HTML5. He utilizado las etiquetas <thead> y <tfoot> para poner en práctica lo aprendido en clase. En la hoja de estilos, \textit{horario.css}, he utilizado una fuente distinta y, sobre todo, he distinguido entre los elementos  pares e impares de las filas para que tengan distintos tonos de color y darle una impresión mejor. Además, al posar el ratón en las filas más oscuras, se esclarecen.
+
+\section{Técnicos}
+
+En la página de Técnicos (\textit{tecnicos.html}), divido la pantalla en columnas (12) y defino desplazamientos (11) para ir situando cada técnico a lo largo y ancho de la página. Cada entrenador está caracterizado por una foto, su nombre y especialidad, todo ello encerrado en una caja con bordes y fondo coloreado. Por último, la página posee una foto de fondo.
+
+\section{Localización}
+
+He añadido esta página extra para comprobar por mí mismo como utilizar Google Maps en HTML5. Es verdaderamente sencillo, no hay más que escribir el enlace por medio de la etiqueta \textit{iframe}.
+
+\section{Precios y promociones}
+
+
+Para la página de precios, también extra, he utilizado la división de Técnicos para definir las cuatro tarifas que he inventado. Bajo las cajas, una imagen de fondo. 
+
+\section{Alta de usuario}
+
+El alta de usuario, situado en \textit{formularioalta.html}, contiene un gran formulario. En él, he incluido ciertas etiquetas novedosas de HTML5. \\
+En primer lugar, divido la información en personal y deportiva, por medio de la etiqueta \textit{fieldset}. Para recoger el email y el teléfono utilizo los types \textit{tel} y \textit{email}. Además, para aquella información con múltiples alternativas, utilizo <select>, checkboxes, y <datalist>, nueva en HTML5. \\
+
+Por último, el formulario cuenta con dos botones: reset, con su funcionalidad estándar; y enviar, en el que he incluido, por medio de la cláusula \textit{onclick} una pantallita emergente que nos informa de que la información se registró correctamente. Desde el punto de vista del estilo, cuando se selecciona un campo para escribir en él, dicho campo de texto cambia de color, dando la sensación de estar seleccionado.
+
+\section{Foro}
+
+Llegamos a la última parte de la página, el foro. Estructuralmente se basa en un título, llamado 'QUERIES' y dos columnas, la primera con preguntas ya hechas, a las que se puede acceder haciendo click sobre ellas, llevándonos a una nueva página donde se explica la pregunta y se pueden agregar comentarios (por medio de un formulario y de nuevo al enviar el comentario, la página nos avisa de que el comentario se registró satisfactoriamente); y una segunda columna donde, a través de un formulario encapsulado se pueden establecer nuevas preguntas. \\
+
+Desde el punto de vista del estilo, he dado rienda suelta. En primer lugar, el título está formado por letras que se mueven, como con una bisagra, teniendo un doble fondo. Las preguntas están en cajas, en las que he practicado con los bordes, y la página en general tiene una imagen de fondo.
+
+
+\section{Conclusiones}
+
+Tras haber terminado la práctica, he extraído ciertas reflexiones. La primera es la potencia del CSS, capaz de convertir un conjunto de títulos estructurados en algo realmente vistoso. Sin embargo, es verdaderamente tedioso y poco ágil, haciendo que el programador repita y repita los mismos procesos en cada clase. Por tanto, está totalmente justificado el uso y desarrollo de herramientas a más alto nivel, como Wordpress, para hacer el diseño más cómodo y dinámico. Una vez apartadas las dificultades técnicas, la creación de una página web es algo totalmente creativo y casi artístico, hecho que justifique que cada vez más diseñadores gráficos y artistas se dediquen al diseño web en vez de ingenieros.
+
+
+\newpage
+%------------------------------------------------
+
+
+\bibliography{citas} %archivo citas.bib que contiene las entradas 
+\bibliographystyle{plain} % hay varias formas de citar
+
+
+	
+\end{document}
