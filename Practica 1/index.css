@@ -92,7 +92,7 @@ img{
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
- .topnav {display: inline-block;
+ .topnav {display: inline;
             font-size: 12px;}
  .topnav a.icon {
    float: right;
@@ -156,4 +156,22 @@ footer{
   width: 100%;
   text-align: center;
   color: black;
+}
+
+@media (max-width:720px) {
+  h2{
+    font-size: 80%;
+  }
+}
+
+@media (max-width: 500px) {
+  .logo img{
+    margin: auto;
+    float: none;
+    display: block;
+  }
+
+  .titulo{
+    font-size: 50%;
+  }
 }

@@ -82,3 +82,21 @@ p.text{
 footer{
 	position: relative;
 }
+
+@media (max-width:720px) {
+  h2{
+    font-size: 80%;
+  }
+}
+
+@media (max-width: 500px) {
+  .logo img{
+    margin: auto;
+    float: none;
+    display: block;
+  }
+
+  .titulo{
+    font-size: 50%;
+  }
+}

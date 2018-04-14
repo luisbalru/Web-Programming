@@ -9,6 +9,7 @@
     <!-- Load font awesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="actividades.css">
+    <link rel="stylesheet" type="text/css" href="menu.css">
 
   </head>
 
@@ -35,19 +36,29 @@
         </section>
     </header>
 
-    <section>
-        <nav class="topnav">
-              <a class="active" href="index2.html">Inicio</a>
-              <a href="actividades.html">Actividades</a>
-              <a href="horario.html">Horario</a>
-              <a href="tecnicos.html">Técnicos</a>
-              <a href="localizacion.html">Localización</a>
-              <a href="precios.html">Precios y promociones</a>
-              <a href="formularioalta.html">Alta de usuario</a>
-              <a href="foro.html">Foro</a>
-        </nav>
-    </section>
+    <section class="menu-principal">
 
+      <label for="menu-desplegable">
+      <section class="boton">
+        <span></span>
+        <span></span>
+        <span></span>
+      </section>
+      </label>
+      <input type="checkbox" id="menu-desplegable"/>
+      <nav class="topnav">
+        <ul id="menu">
+          <li><a class="active" href="index.html">Inicio</a></li>
+          <li><a href="actividades.html">Actividades</a></li>
+          <li><a href="horario.html">Horario</a></li>
+          <li><a href="#technics">Técnicos</a></li>
+          <li><a href="localizacion.html">Localización</a></li>
+          <li><a href="precios.html">Precios y promociones</a></li>
+          <li><a href="formularioalta.html">Alta de usuario</a></li>
+          <li><a href="foro.html">Foro</a></li>
+        </ul>
+      </nav>
+  </section>
     <section class="cuerpo">
             <section class="split-left">
               <h2><span>ACTIVIDADES</span></h2>

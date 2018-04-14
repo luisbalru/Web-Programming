@@ -1,6 +1,7 @@
 #horario {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
+    overflow-x:auto;
     text-align: center;
     width: 100%;
 }
@@ -21,4 +22,22 @@
     padding-bottom: 12px;
     background-color: #127EB2;
     color: white;
+}
+
+@media (max-width:720px) {
+  h2{
+    font-size: 80%;
+  }
+}
+
+@media (max-width: 500px) {
+  .logo img{
+    margin: auto;
+    float: none;
+    display: block;
+  }
+
+  .titulo{
+    font-size: 50%;
+  }
 }

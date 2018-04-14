@@ -84,3 +84,28 @@ body{
 .desp9{margin-left: 75%}
 .desp10{margin-left: 83.3%}
 .desp11{margin-left: 91.6%}
+
+
+@media (max-width:720px) {
+  h2{
+    font-size: 80%;
+  }
+}
+
+@media (max-width: 500px) {
+  .logo img{
+    margin: auto;
+    float: none;
+    display: block;
+  }
+
+  .titulo{
+    font-size: 50%;
+  }
+
+  img{
+    margin: auto;
+    float: none;
+    display: block;
+  }
+}
