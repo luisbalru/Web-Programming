@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:900);
+@import url('https://fonts.googleapis.com/css?family=Lato:900');
 *, *:before, *:after{
   box-sizing:border-box;
 }
@@ -70,7 +70,7 @@ section.foo{
 }
 
 body{
-  background-image: url(imagenes/back2.jpeg);
+  background-image: url('./imagenes/back2.jpeg');
 }
 
 .texto{
