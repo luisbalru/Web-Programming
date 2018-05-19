@@ -1,0 +1,73 @@
+/* RESPONSIVE MENU */
+@media(min-width:250px) and (max-width:1170px){
+    .boton {
+    display: block;
+     width: 100%;
+    height: 3%;
+    padding: 1%;
+    margin-right: 10%
+    border-radius: 6%;
+    background: #666;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    font-family: cursive;
+    text-align: center;
+    }
+
+    .boton span {
+    display: inline;
+    width:10px;
+    height: 20%;
+    background: white;
+    margin-top:1%;
+    }
+
+    label {
+     cursor: pointer;
+    }
+
+    #menu-desplegable {
+      display: none; /* hide the checkbox */
+    }
+    .topnav #menu {
+      display: none;
+      text-align: center;
+      background: white;
+      padding:10px 0;
+    }
+
+    .topnav #menu li a {
+    	color: black;
+    	padding: 2px 0;
+    	display: inline-block;
+    }
+    #menu-desplegable:checked + .topnav #menu {
+      display: inline-block;
+      text-align: center;
+    }
+
+    .menu-principal{
+      display: none;
+      margin-left: 0px;
+    }
+}
+
+#menu-desplegable{
+  display: none;
+}
+.menu-principal {
+    min-width: 47%;
+    display: inline;
+}
+
+.menu-principal a {
+    display: block;
+    padding: 6px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.topnav ul{
+  list-style: none;
+}

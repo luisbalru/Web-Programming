@@ -1,0 +1,104 @@
+@font-face {
+    font-family: Fuente1;
+    src: url('./Fonts/ostrichroundedwebfont.woff');
+    font-weight: bold;
+}
+
+@font-face {
+  font-family: Fuente2;
+  src:url('./Fonts/SansationLight.woff');
+}
+
+@font-face {
+  font-family: Fuente3;
+  src:url('./Fonts/JustusItalic.woff');
+}
+
+.cuerpo{
+  display: flex;
+  height:450px;
+}
+
+h2{
+  font-weight: bold;
+  font-size: 100;
+}
+
+.split-left{
+  font-family: Fuente2;
+  flex-direction: column;
+  justify-content: center;
+  flex:1;
+  padding: 1rem;
+  overflow: scroll;
+
+}
+
+.split-right{
+  background-image: url(imagenes/back.jpg);
+  background-repeat:no-repeat;
+  background-position:center;
+  font-family: Fuente3;
+  flex-direction: column;
+  justify-content: right;
+  flex:1;
+  padding: 1rem;
+}
+
+.centered{
+  border: 2px solid #ccc;
+  background-color: #eee;
+  border-radius: 5%;
+  padding: 1%;
+  margin: 5% 0;
+}
+
+.centered::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.centered img {
+  float: left;
+  margin-right: 6%;
+  border-radius: 50%;
+}
+
+.centered span {
+  font-size: 6%;
+  margin-right: 5%;
+}
+
+@media (max-width:720px) {
+  h2{
+    font-size: 80%;
+  }
+}
+
+@media (max-width: 500px) {
+  .logo img{
+    margin: auto;
+    float: none;
+    display: block;
+  }
+
+  .titulo{
+    font-size: 50%;
+  }
+
+  .split-right img{
+    margin: auto;
+    float: none;
+    display: block;
+  }
+
+  .centered {
+      text-align: center;
+  }
+  .centered img {
+      margin: auto;
+      float: none;
+      display: block;
+  }
+}

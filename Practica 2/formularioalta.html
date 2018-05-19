@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>WFC Wellness Fitness Center</title>
+    <link rel="stylesheet" type="text/css" href="index.css"/>
+    <!-- Load font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="formulario.css">
+
+  </head>
+
+  <body>
+    <header>
+        <section class="logo">
+          <a href="index2.html" class="logo">
+            <figure>
+              <img src="./imagenes/logo-web.png" alt="logo">
+            </figure>
+          </a>
+        </section>
+        <section class="title">
+          <a class="titulo" href="#home"><h1>WFC Wellness Fitness Center</h1></a>
+        </section>
+        <section class="logeado">
+            Correcto. ¡Bienvenido, guerrer@!
+        </section>
+
+        <section class="icon">
+            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+        </section>
+    </header>
+
+    <nav class="topnav">
+        <a class="active" href="index2.html">Inicio</a>
+        <a href="actividades.html">Actividades</a>
+        <a href="horario.html">Horario</a>
+        <a href="tecnicos.html">Técnicos</a>
+        <a href="localizacion.html">Localización</a>
+        <a href="precios.html">Precios y promociones</a>
+        <a href="formularioalta.html">Alta de usuario</a>
+        <a href="foro.html">Foro</a>
+    </nav>
+
+    <form action="alta_usuario.php" method="post" name="alta_usuario" autocomplete="OFF">
+
+      <fieldset>
+        <legend> Información personal: </legend>
+          Nombre: <input type="text" name="nombre"> <br> <br>
+          Apellidos: <input type="text" name="apellidos"> <br> <br>
+          DNI: <input type="text" name="dni"> <br> <br>
+          Fecha de naciemiento: <input type="date" name="edad" value="yyyy-mm-dd"> <br> <br>
+          Sexo: <br>
+            <input type="radio" name="sexo" value="M"> Masculino <br>
+            <input type="radio" name="sexo" value="F"> Femenino <br>
+          Direccion: <input type="text" name="address"><br> <br>
+          Teléfono: <input type="tel" name="numero"><br> <br>
+          Email: <input type="email" name="email"></br> <br>
+          Talla de camiseta <input type="text" name="talla"></br> <br>
+          Tarifa que se quiere escoger: <br>
+            <select name="tarifas">
+              <option value="fitness">Fitness</option>
+              <option value="yfitness">Fitness joven</option>
+              <option value="wellness">Wellness</option>
+              <option value="ywellness">Wellness joven</option>
+            </select>
+          <br><br>
+          ¿Cómo desea hacer los pagos? <br>
+            <input type="radio" name="pago" value="tarjeta">Con tarjeta<br>
+            <input type="radio" name="pago" value="efectivo">En efectivo<br>
+          <br><br>
+      </fieldset>
+
+      <fieldset>
+        <legend> Trayectoria deportiva</legend>
+          ¿Te gusta el deporte?<br>
+            <input type="checkbox" id="Si">
+            <label for="Si">¡Muchísimo!</label>
+            <input type="checkbox" id="algo">
+            <label for="algo">Un poco</label>
+            <input type="checkbox" id="no">
+            <label for="no">Nada</label>
+
+          <br><br>
+          ¿Cuánto deporte haces?
+            <input list="deportista">
+            <datalist id="deportista">
+              <option value="Menos de un día a la semana">
+              <option value="Entre 1-2 días a la semana">
+              <option value="Entre 3-5 días a la semana">
+              <option value="Todos los días">
+            </datalist>
+          <br><br>
+
+          ¿Qué deportes practicas?<br>
+            <input type="checkbox" name="sport">Fútbol<br>
+            <input type="checkbox" name="sport">Baloncesto<br>
+            <input type="checkbox" name="sport">Tenis<br>
+            <input type="checkbox" name="sport">Running<br>
+            <input type="checkbox" name="sport">Natación<br>
+            <input type="checkbox" name="sport">Otros<br>
+            <input type="text" name="otros" placeholder="Si seleccionaste otros, cítalos"> <br>
+      </fieldset>
+
+      <br> <br>
+        <input type="submit" id="enviar" value="Enviar"  onclick="alert('La información se registró correctamente')">
+        <input type="reset" id="limpiar" value="Reset">
+
+        <br>
+    </form>
+
+    <footer>
+         <a href="como_se_hizo.pdf">Cómo se hizo</a>
+         <p>Posted by:</p> <a href="mailto:wfc@correo.com">Luis Balderas Ruiz</a>
+    </footer>
+
+  </body>
+
+</html>
