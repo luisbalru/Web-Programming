@@ -2,6 +2,7 @@ CREATE TABLE Cliente(
 	Nombre varchar(10) NOT NULL,
 	Apellidos varchar(30) NOT NULL,
 	DNI varchar(12) NOT NULL,
+	Clave varchar(50) NOT NULL,
 	FechaNacimiento varchar(30) NOT NULL,
 	Sexo varchar(2) NOT NULL,
 	Direccion varchar(50) NOT NULL,
