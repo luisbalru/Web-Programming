@@ -29,7 +29,8 @@
       $sql = "INSERT INTO ".TABLA_CLIENTES." VALUES('".$array['nombre']."','".$array['apellidos']."',
                                               '".$array['dni']."','".$array['fechaNacimiento']."','".$array['sexo']."','"
                                               .$array['direccion']."','".$array['telefono']."','".$array['email']."','".
-                                              $array['talla']."','".$array['tarifa']."','".$array['pago']."','".$array['estadisticas_varias']."');";
+                                              $array['talla']."','".$array['tarifa']."','".$array['pago']."','".$array['nombre_imagen']."','".
+                                              $array['estadisticas_varias']."');";
       print($sql);
       try{
         $st = $conexion->prepare($sql);

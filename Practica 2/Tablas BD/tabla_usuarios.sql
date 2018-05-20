@@ -10,6 +10,6 @@ CREATE TABLE Cliente(
 	Talla varchar(1),
 	Tarifa varchar(15) NOT NULL,
 	Pago varchar(10) NOT NULL,
+	NombreImagen varchar(100) NOT NULL,
 	Estadisticas varchar(60),
 	PRIMARY KEY(DNI));
-	
