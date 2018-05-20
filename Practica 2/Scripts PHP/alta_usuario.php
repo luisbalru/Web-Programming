@@ -30,7 +30,16 @@
     if($nombre_img == !NULL) echo "La imagen es demasiado grande ";
   }
 
-  $datos_cliente = array("nombre" => $_POST['nombre'], "apellidos" => $_POST['apellidos'], "dni" => $_POST['dni'],
+  $passwd = $_POST['passwd'];
+
+  $passwd = password_hash(
+              base64_encode(
+                has('sha256',$passwd,true)
+              ),
+              PASSWORD_DEFAULT
+            );
+
+  $datos_cliente = array("nombre" => $_POST['nombre'], "apellidos" => $_POST['apellidos'], "dni" => $_POST['dni'], "passwd" => $passwd,
                           "fechaNacimiento" => $_POST['edad'], "sexo" => $_POST['sexo'],"direccion" => $_POST['address'],
                           "telefono" => $_POST['numero'], "email" => $_POST['email'], "talla" => $_POST['talla'],
                           "tarifa" => $_POST['tarifas'],"pago" => $_POST['pago'], "nombre_imagen" => $nombre_img,
