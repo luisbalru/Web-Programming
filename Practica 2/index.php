@@ -14,15 +14,15 @@
   <body>
     <header>
         <section class="logo">
-          <a href="index.html" class="logo">
+          <a href="index.php" class="logo">
               <img src="./imagenes/logo-web.png" alt="logo">
           </a>
         </section>
         <section class="title">
-          <a class="titulo" href="index.html"><h1>WFC Wellness Fitness Center</h1></a>
+          <a class="titulo" href="index.php"><h1>WFC Wellness Fitness Center</h1></a>
         </section>
         <section class="log-in">
-            <form action="procesar.php" method="post">
+            <form action="login.php" method="post">
 
                 <label for="usuario">Usuario:</label>
                 <input type="text" id="usuario" name="usuario"/></br>
@@ -32,9 +32,7 @@
                 <input type="password" id="passw" name="passwd"/></br>
 
 
-              <a href="index2.html">
-                <input type="button" id="login" value="Log in"/>
-              </a>
+              <input type="submit" id="enviar" value="Log in"/>
               <input type="reset" id="limpiar" value="Reset"/>
             </form>
         </section>
@@ -47,7 +45,7 @@
     </header>
 
     <nav class="topnav">
-          <a class="active" href="index.html">Inicio</a>
+          <a class="active" href="index.php">Inicio</a>
           <a href="actividades.html">Actividades</a>
           <a href="horario.html">Horario</a>
           <a href="tecnicos.html">Técnicos</a>
