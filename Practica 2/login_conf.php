@@ -7,7 +7,7 @@
     {
       echo '<section class="logeado">
               <form action="logout.php" method="post">
-                Bienvenido';
+                Bienvenido ';
                 echo $_SESSION['dni'];
 
                 echo '<input type="submit" id="enviar" value="Desconectar"/>

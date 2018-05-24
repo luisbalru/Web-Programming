@@ -24,6 +24,7 @@
 
         <?php
           require_once('login_conf.php');
+          var_dump(isset($_SESSION['conectado']));
           login_conf();
         ?>
 
