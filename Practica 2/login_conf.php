@@ -2,17 +2,20 @@
 
 
   function login_conf(){
-    if((isset($_SESSION['conectado'])))
+
+    if((isset($_SESSION)))
     {
-      echo "<section class="logeado">
+      echo '<section class="logeado">
               <form action="logout.php" method="post">
-                Bienvenido $_SESSION['dni']
-                <input type="submit" id="enviar" value="Desconectar"/>
+                Bienvenido';
+                echo $_SESSION['dni'];
+
+                echo '<input type="submit" id="enviar" value="Desconectar"/>
               </form>
-            </section>";
+            </section>';
     }
     else{
-      echo "<section class="log-in">
+      echo '<section class="log-in">
               <form action="login.php" method="post">
 
                 <label for="usuario">Usuario:</label>
@@ -20,13 +23,19 @@
 
 
                 <label for="passw">Contraseña:</label>
-                <input type="password" id="passw" name="passwd"/></br>
+                <input type="password" id="passw" name="passwd"/></br>';
 
 
-              <input type="submit" id="enviar" value="Log in"/>
+                  if(isset($_GET["errorAut"]) && $_GET["errorAut"] == 'Si')
+                  {
+                    echo "<div style='color:red'>Usuario o contraseña invalido </div>";
+                  }
+
+
+            echo'<input type="submit" id="enviar" value="Log in"/>
               <input type="reset" id="limpiar" value="Reset"/>
             </form>
-          </section>";
+          </section>';
     }
 
   }

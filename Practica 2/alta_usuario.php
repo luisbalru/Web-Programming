@@ -1,7 +1,7 @@
 <?php
   require_once('GestionCliente.class.inc');
 
-  $nombre_img = $_FILES['imagen']['name'];
+/*  $nombre_img = $_FILES['imagen']['name'];
   $tipo = $_FILES['imagen']['type'];
   $size = $_FILES['imagen']['size'];
 
@@ -28,13 +28,13 @@
   {
     //si existe la variable pero se pasa del tamaño permitido
     if($nombre_img == !NULL) echo "La imagen es demasiado grande ";
-  }
+  }*/
 
   $passwd = $_POST['passwd'];
 
   $passwd = password_hash(
               base64_encode(
-                has('sha256',$passwd,true)
+                hash('sha256',$passwd,true)
               ),
               PASSWORD_DEFAULT
             );
@@ -42,7 +42,7 @@
   $datos_cliente = array("nombre" => $_POST['nombre'], "apellidos" => $_POST['apellidos'], "dni" => $_POST['dni'], "passwd" => $passwd,
                           "fechaNacimiento" => $_POST['edad'], "sexo" => $_POST['sexo'],"direccion" => $_POST['address'],
                           "telefono" => $_POST['numero'], "email" => $_POST['email'], "talla" => $_POST['talla'],
-                          "tarifa" => $_POST['tarifas'],"pago" => $_POST['pago'], "nombre_imagen" => $nombre_img,
+                          "tarifa" => $_POST['tarifas'],"pago" => $_POST['pago'], "nombre_imagen" => "/public_html/centrodeportivoII/img_users/img_def.jpg",
                           "estadisticas_varias" => "En proceso");
 
   $gestion = new GestionCliente();

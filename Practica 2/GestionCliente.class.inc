@@ -7,7 +7,7 @@
     public static function obtenerCliente($dni)
     {
       $conexion = parent::conectar();
-      $sql = "SELECT * FROM".TABLA_CLIENTES." WHERE dni=:dni";
+      $sql = "SELECT * FROM ".TABLA_CLIENTES." WHERE dni=:dni";
       try{
         $st = $conexion->prepare($sql);
         $st->bindValue(":dni",$dni,PDO::PARAM_STR);
@@ -46,29 +46,31 @@
     public static function autenticarCliente($login, $passwd)
     {
       $conexion = parent::conectar();
-      $sql = "SELECT Clave FROM".TABLA_CLIENTES." WHERE DNI =:dni";
+      $sql = "SELECT Clave FROM ".TABLA_CLIENTES." WHERE DNI =:dni";
       try{
         $st = $conexion->prepare($sql);
         $st->bindValue(":dni",$login,PDO::PARAM_STR);
         $st->execute();
         $fila = $st->fetch(PDO::FETCH_ASSOC);
         parent::desconectar($conexion);
+        $var = base64_decode($fila['Clave']);
         if($fila){
-          if(hash_equals($passwd,$fila))
+          if(strcmp($passwd,$fila['Clave'])==0)
           {
             session_start();
             $_SESSION['conectado'] = true;
             $_SESSION['dni'] = $login;
+            var_dump($_SESSION);
             header("Location: index.php");
           }
           else{
             echo "Contraseña incorrecta";
-            header("Location: index.php?errorusuario=si");
+            header("Location: index.php?pass:$passwd..+var:$var");
           }
         }
         else{
           echo "No existe usuario o contraseña";
-          header("Location: index.php");
+          header("Location: index.php?noexiste");
         }
       }
       catch(PDOException $e){
