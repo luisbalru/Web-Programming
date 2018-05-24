@@ -53,19 +53,19 @@
         $st->execute();
         $fila = $st->fetch(PDO::FETCH_ASSOC);
         parent::desconectar($conexion);
-        $var = base64_decode($fila['Clave']);
+        $passwd = base64_decode($passwd);
+        $valor = base64_decode($fila['Clave']);
         if($fila){
-          if(strcmp($passwd,$fila['Clave'])==0)
+          if(strcmp($passwd,$valor)==0)
           {
             session_start();
             $_SESSION['conectado'] = true;
             $_SESSION['dni'] = $login;
-            var_dump($_SESSION);
             header("Location: index.php");
           }
           else{
             echo "Contraseña incorrecta";
-            header("Location: index.php?pass:$passwd..+var:$var");
+            header("Location: index.php?errorAut=Si");
           }
         }
         else{

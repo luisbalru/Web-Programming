@@ -32,12 +32,7 @@
 
   $passwd = $_POST['passwd'];
 
-  $passwd = password_hash(
-              base64_encode(
-                hash('sha256',$passwd,true)
-              ),
-              PASSWORD_DEFAULT
-            );
+  $passwd = base64_encode($passwd);
 
   $datos_cliente = array("nombre" => $_POST['nombre'], "apellidos" => $_POST['apellidos'], "dni" => $_POST['dni'], "passwd" => $passwd,
                           "fechaNacimiento" => $_POST['edad'], "sexo" => $_POST['sexo'],"direccion" => $_POST['address'],

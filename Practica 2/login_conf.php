@@ -3,7 +3,7 @@
 
   function login_conf(){
 
-    if((isset($_SESSION)))
+    if(isset($_SESSION['conectado']))
     {
       echo '<section class="logeado">
               <form action="logout.php" method="post">
