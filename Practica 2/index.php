@@ -21,21 +21,11 @@
         <section class="title">
           <a class="titulo" href="index.php"><h1>WFC Wellness Fitness Center</h1></a>
         </section>
-        <section class="log-in">
-            <form action="login.php" method="post">
 
-                <label for="usuario">Usuario:</label>
-                <input type="text" id="usuario" name="usuario"/></br>
-
-
-                <label for="passw">Contraseña:</label>
-                <input type="password" id="passw" name="passwd"/></br>
-
-
-              <input type="submit" id="enviar" value="Log in"/>
-              <input type="reset" id="limpiar" value="Reset"/>
-            </form>
-        </section>
+        <?php
+          require_once('login_conf.php');
+          login_conf();
+        ?>
 
         <section class="icon">
             <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
