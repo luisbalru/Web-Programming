@@ -48,8 +48,20 @@
         <a href="tecnicos.php">Técnicos</a>
         <a href="localizacion.php">Localización</a>
         <a href="precios.php">Precios y promociones</a>
-        <a href="formularioalta.php">Alta de usuario</a>
-        <a href="foro.php">Foro</a>
+        <?php
+          if(!isset($_SESSION['conectado'])){
+            echo '<a href="formularioalta.php">Alta de usuario</a>';
+          }
+        ?>
+        <?php
+          if(!isset($_SESSION['conectado'])){
+            echo '<a href="#" data-toggle="tooltip" data-placement="top" title="Resgístrate para
+            acceder al foro!>Foro</a>';
+          }
+          else{
+            echo '<a href="foro.php">Foro</a>';
+          }
+        ?>
     </nav>
 
     <form action="alta_usuario.php" method="post" name="alta_usuario" autocomplete="OFF" onsubmit="return validate_alta_usuario();">

@@ -59,8 +59,20 @@
           <li><a href="tecnicos.php">Técnicos</a></li>
           <li><a href="localizacion.php">Localización</a></li>
           <li><a href="precios.php">Precios y promociones</a></li>
-          <li><a href="formularioalta.php">Alta de usuario</a></li>
-          <li><a href="foro.php">Foro</a></li>
+          <?php
+            if(!isset($_SESSION['conectado'])){
+              echo '<li><a href="formularioalta.php">Alta de usuario</a></li>';
+            }
+          ?>
+          <?php
+            if(!isset($_SESSION['conectado'])){
+              echo '<li><a href="#" data-toggle="tooltip" data-placement="top" title="Resgístrate para
+              acceder al foro!>Foro</a></li>';
+            }
+            else{
+              echo '<li><a href="foro.php">Foro</a></li>';
+            }
+          ?>
         </ul>
       </nav>
   </section>
