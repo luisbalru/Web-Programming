@@ -11,20 +11,25 @@
   </head>
 
   <body>
+    <?php
+      session_start();
+      session_regenerate_id();
+    ?>
     <header>
         <section class="logo">
-          <a href="index2.html" class="logo">
+          <a href="index.php" class="logo">
             <figure>
               <img src="././imagenes/logo-web.png" alt="logo">
             </figure>
           </a>
         </section>
         <section class="title">
-          <a class="titulo" href="#home"><h1>WFC Wellness Fitness Center</h1></a>
+          <a class="titulo" href="index.php"><h1>WFC Wellness Fitness Center</h1></a>
         </section>
-        <section class="logeado">
-            Correcto. ¡Bienvenido, guerrer@!
-        </section>
+        <?php
+          require_once('login_conf.php');
+          login_conf();
+        ?>
 
         <section class="icon">
             <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
@@ -34,14 +39,14 @@
     </header>
 
     <nav class="topnav">
-        <a class="active" href="index2.html">Inicio</a>
-        <a href="actividades.html">Actividades</a>
-        <a href="horario.html">Horario</a>
-        <a href="tecnicos.html">Técnicos</a>
-        <a href="localizacion.html">Localización</a>
-        <a href="precios.html">Precios y promociones</a>
-        <a href="formularioalta.html">Alta de usuario</a>
-        <a href="foro.html">Foro</a>
+        <a class="active" href="index2.php">Inicio</a>
+        <a href="actividades.php">Actividades</a>
+        <a href="horario.php">Horario</a>
+        <a href="tecnicos.php">Técnicos</a>
+        <a href="localizacion.php">Localización</a>
+        <a href="precios.php">Precios y promociones</a>
+        <a href="formularioalta.php">Alta de usuario</a>
+        <a href="foro.php">Foro</a>
     </nav>
 
 

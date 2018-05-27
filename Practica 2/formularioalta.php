@@ -13,6 +13,10 @@
   </head>
 
   <body>
+    <?php
+      session_start();
+      session_regenerate_id();
+    ?>
     <header>
         <section class="logo">
           <a href="index.php" class="logo">
@@ -24,9 +28,11 @@
         <section class="title">
           <a class="titulo" href="index.php"><h1>WFC Wellness Fitness Center</h1></a>
         </section>
-        <section class="logeado">
-            Correcto. ¡Bienvenido, guerrer@!
-        </section>
+
+        <?php
+          require_once('login_conf.php');
+          login_conf();
+        ?>
 
         <section class="icon">
             <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>

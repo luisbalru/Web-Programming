@@ -29,7 +29,6 @@
 
         <?php
           require_once('login_conf.php');
-          var_dump(isset($_SESSION['conectado']));
           login_conf();
         ?>
 
@@ -42,13 +41,13 @@
 
     <nav class="topnav">
           <a class="active" href="index.php">Inicio</a>
-          <a href="actividades.html">Actividades</a>
-          <a href="horario.html">Horario</a>
-          <a href="tecnicos.html">Técnicos</a>
-          <a href="localizacion.html">Localización</a>
-          <a href="precios.html">Precios y promociones</a>
-          <a href="formularioalta.html">Alta de usuario</a>
-          <a href="foro.html">Foro</a>
+          <a href="actividades.php">Actividades</a>
+          <a href="horario.php">Horario</a>
+          <a href="tecnicos.php">Técnicos</a>
+          <a href="localizacion.php">Localización</a>
+          <a href="precios.php">Precios y promociones</a>
+          <a href="formularioalta.php">Alta de usuario</a>
+          <a href="foro.php">Foro</a>
     </nav>
 
     <section id="slider">

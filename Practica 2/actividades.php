@@ -14,20 +14,25 @@
   </head>
 
   <body>
+    <?php
+      session_start();
+      session_regenerate_id();
+    ?>
     <header>
         <section class="logo">
-          <a href="index2.html" class="logo">
+          <a href="index.php" class="logo">
             <figure>
               <img src="./imagenes/logo-web.png" alt="logo">
             </figure>
           </a>
         </section>
         <section class="title">
-          <a class="titulo" href="#home"><h1>WFC Wellness Fitness Center</h1></a>
+          <a class="titulo" href="index.php"><h1>WFC Wellness Fitness Center</h1></a>
         </section>
-        <section class="logeado">
-            Correcto. ¡Bienvenido, guerrer@!
-        </section>
+        <?php
+          require_once('login_conf.php');
+          login_conf();
+        ?>
 
         <section class="icon">
             <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
@@ -48,14 +53,14 @@
       <input type="checkbox" id="menu-desplegable"/>
       <nav class="topnav">
         <ul id="menu">
-          <li><a class="active" href="index.html">Inicio</a></li>
-          <li><a href="actividades.html">Actividades</a></li>
-          <li><a href="horario.html">Horario</a></li>
-          <li><a href="tecnicos.html">Técnicos</a></li>
-          <li><a href="localizacion.html">Localización</a></li>
-          <li><a href="precios.html">Precios y promociones</a></li>
-          <li><a href="formularioalta.html">Alta de usuario</a></li>
-          <li><a href="foro.html">Foro</a></li>
+          <li><a class="active" href="index.php">Inicio</a></li>
+          <li><a href="actividades.php">Actividades</a></li>
+          <li><a href="horario.php">Horario</a></li>
+          <li><a href="tecnicos.php">Técnicos</a></li>
+          <li><a href="localizacion.php">Localización</a></li>
+          <li><a href="precios.php">Precios y promociones</a></li>
+          <li><a href="formularioalta.php">Alta de usuario</a></li>
+          <li><a href="foro.php">Foro</a></li>
         </ul>
       </nav>
   </section>
