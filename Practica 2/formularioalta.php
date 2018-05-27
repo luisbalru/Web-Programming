@@ -43,13 +43,13 @@
 
     <nav class="topnav">
         <a class="active" href="index.php">Inicio</a>
-        <a href="actividades.html">Actividades</a>
-        <a href="horario.html">Horario</a>
-        <a href="tecnicos.html">Técnicos</a>
-        <a href="localizacion.html">Localización</a>
-        <a href="precios.html">Precios y promociones</a>
-        <a href="formularioalta.html">Alta de usuario</a>
-        <a href="foro.html">Foro</a>
+        <a href="actividades.php">Actividades</a>
+        <a href="horario.php">Horario</a>
+        <a href="tecnicos.php">Técnicos</a>
+        <a href="localizacion.php">Localización</a>
+        <a href="precios.php">Precios y promociones</a>
+        <a href="formularioalta.php">Alta de usuario</a>
+        <a href="foro.php">Foro</a>
     </nav>
 
     <form action="alta_usuario.php" method="post" name="alta_usuario" autocomplete="OFF" onsubmit="return validate_alta_usuario();">
