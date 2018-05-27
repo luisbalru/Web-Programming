@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WFC Wellness Fitness Center</title>
     <link rel="stylesheet" type="text/css" href="index.css"/>
+    <link rel="stylesheet" type="text/css" href="localizacion.css"/>
     <!-- Load font awesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="slider-def.css">
@@ -51,8 +52,29 @@
     </nav>
 
 
+    <h1>Hola <?php echo $_SESSION['dni']; ?></h1>
+    <h2>Modifica tus datos personales</h2>
 
-
+      <form action="modificar_pass_usuario.php" method="post" name="alta_usuario" autocomplete="OFF" onsubmit="return validate_alta_usuario();">
+        <fieldset>
+          <legend> Modifica tu contraseña: </legend>
+            Nueva contraseña: <input type="password" name="passwd"> <br> <br>
+        </fieldset>
+        <input type="submit" id="enviar" value="Enviar"  onclick="alert('Nueva contraseña almacenada')">
+        <input type="reset" id="limpiar" value="Reset">
+      </form>
+      <br> <br>
+      <form action="modificar_dir_tel_email.php" method="post" name = "alta_usuario" autocomplete="off" onsubmit="return validate_alta_usuario();">
+        <fieldset>
+          <legend> Modifica tu dirección, teléfono, email o talla de camiseta </legend>
+            Direccion: <input type="text" name="address" required><br> <br>
+            Teléfono: <input type="tel" name="numero" required><br> <br>
+            Email: <input type="email" name="email" required></br> <br>
+            Talla de camiseta <input type="text" name="talla" required></br> <br>
+        </fieldset>
+        <input type="submit" id="enviar" value="Enviar"  onclick="alert('La información se registró correctamente')">
+        <input type="reset" id="limpiar" value="Reset">
+      </form>
 
   </body>
 </html>
