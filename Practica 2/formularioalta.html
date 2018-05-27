@@ -8,6 +8,7 @@
     <!-- Load font awesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="formulario.css">
+    <script type="text/javascript" src="./validacion_at.js"></script>
 
   </head>
 
@@ -45,7 +46,7 @@
         <a href="foro.html">Foro</a>
     </nav>
 
-    <form action="alta_usuario.php" method="post" name="alta_usuario" autocomplete="OFF">
+    <form action="alta_usuario.php" method="post" name="alta_usuario" autocomplete="OFF" onsubmit="return validate_alta_usuario();">
 
       <fieldset>
         <legend> Información personal: </legend>
@@ -62,7 +63,7 @@
           Email: <input type="email" name="email"></br> <br>
           Talla de camiseta <input type="text" name="talla"></br> <br>
           Tarifa que se quiere escoger: <br>
-            <select name="tarifas">
+            <select name="tarifas" required>
               <option value="fitness">Fitness</option>
               <option value="yfitness">Fitness joven</option>
               <option value="wellness">Wellness</option>
