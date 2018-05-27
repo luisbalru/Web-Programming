@@ -78,6 +78,43 @@
       }
     }
 
+    public static function modificarPass($dni,$new_pass)
+    {
+      $conexion = parent::conectar();
+      $sql = "UPDATE ".TABLA_CLIENTES." SET Clave =:pass WHERE DNI = :dni";
+      try{
+        $st = $conexion->prepare($sql);
+        $st->bindValue(":dni",$dni,PDO::PARAM_STR);
+        $st->bindValue(":pass", $new_pass, PDO::PARAM_STR);
+        $st->execute();
+        parent::desconectar($conexion);
+      }
+      catch(PDOException $e){
+        parent::desconectar($conexion);
+        die("Consulta fallida:".$e->getMessage());
+      }
+    }
+
+    public static function modificarDatos($dni,$dir,$tel,$email, $talla)
+    {
+      $conexion = parent::conectar();
+      $sql = "UPDATE ".TABLA_CLIENTES." SET Direccion=:dir, Telefono=:tel, Email=:email, Talla=:talla WHERE DNI=:dni";
+      try{
+        $st = $conexion->prepare($sql);
+        $st->bindValue(":dni",$dni,PDO::PARAM_STR);
+        $st->bindValue(":dir", $dir, PDO::PARAM_STR);
+        $st->bindValue(":tel", $tel, PDO::PARAM_STR);
+        $st->bindValue(":email", $email, PDO::PARAM_STR);
+        $st->bindValue(":talla",$talla,PDO::PARAM_STR);
+        $st->execute();
+        parent::desconectar($conexion);
+      }
+      catch(PDOException $e){
+        parent::desconectar($conexion);
+        die("Consulta fallida:".$e->getMessage());
+      }
+    }
+
   }
 
 
