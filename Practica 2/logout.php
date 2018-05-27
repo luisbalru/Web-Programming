@@ -1,4 +1,6 @@
 <?php
+  session_start();
+  $_SESSION['conectado'] = false;
   unset($_SESSION['conectado']);
   unset($_SESSION['dni']);
   session_unset();

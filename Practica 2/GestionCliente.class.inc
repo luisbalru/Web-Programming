@@ -58,10 +58,9 @@
         if($fila){
           if(strcmp($passwd,$valor)==0)
           {
-            session_start();
             $_SESSION['conectado'] = true;
             $_SESSION['dni'] = $login;
-            header("Location: index.php");
+            header("Location: index.php?Sesion:".$_SESSION['conectado']);
           }
           else{
             echo "Contraseña incorrecta";
