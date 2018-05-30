@@ -42,7 +42,7 @@
     </header>
 
     <nav class="topnav">
-        <a class="active" href="index2.php">Inicio</a>
+        <a class="active" href="index.php">Inicio</a>
         <a href="actividades.php">Actividades</a>
         <a href="horario.php">Horario</a>
         <a href="tecnicos.php">Técnicos</a>
@@ -74,36 +74,117 @@
       <span class="letter" data-letter="S">S</span>
     </section>
 
-    <section class="split-left">
+    <script>
+      function showQueries(str){
+        if (str == "") {
+          document.getElementById("txtHint").innerHTML = "";
+          return;
+        }
+        else{
+          xmlhttp = new XMLHttpRequest();
+
+          xmlhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                  document.getElementById("txtHint").innerHTML = this.responseText;
+              }
+          };
+          xmlhttp.open("GET","getqueries.php?q="+str,true);
+          xmlhttp.send();
+        }
+      }
+    </script>
 
 
-            <a href="pregunta1.php"><p>¿Cuál es la mejor forma de entrenar el biceps?</p></a>
 
-            <a href="pregunta1.php"><p>¿Qué dieta es la mejor para hipertrofiar?</p></a>
 
-            <a href="pregunta1.php"><p>¿Más peso o más repeticiones?</p></a>
+      <?php
+      //include('getPreguntas.php');
+        $dsn = "mysql:host=localhost;dbname=db77145416_pw1718";
+        $db_username = "x77145416";
+        $db_password = "77145416";
+        //Conectando...
+        try{
+          $conexion = new PDO($dsn, $db_username, $db_password);
+          $conexion->setAttribute(PDO::ATTR_PERSISTENT,true);
+          $conexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+          $sql ="SELECT * FROM Preguntas";
+          $result=$conexion->prepare($sql);
+          $result->execute();
+          $rows = $result->fetchAll(PDO::FETCH_ASSOC);
 
-            <a href="pregunta1.php"><p>¿Qué actividad es mejor para perder peso?</p></a>
+          foreach ($rows as $row) {
+            //Para cada pregunta vamos a obtener el nombre y la foto de la persona que la ha realizado
+            $dni = $row['usuario'];
+            $datos_asker = $conexion->prepare("SELECT * FROM Usuario WHERE dni='$dni'");
+            $datos_asker->execute();
+            $salida = $datos_asker->fetchAll(PDO::FETCH_ASSOC);
 
-    </section>
+            foreach ($salida as $aux) {
+              $nombre= $aux['Nombre'];
+              $foto = $aux['NombreImagen'];
+            }
+            //Hallamos las respuesta a la pregunta
+            $pregunta=$row['id'];
+            $sqlr ="SELECT * FROM Respuestas WHERE id_pregunta='$pregunta'";
+            $r=$conexion->prepare($sqlr);
+            $r->execute();
+            $rowsr = $r->fetchAll(PDO::FETCH_ASSOC);
 
-    <section class="split-right"
-      <form method="post" name="quest" autocomplete="off">
-        <section class="fila">
-          <ul class="tecnicos">
-            <li class="columna11 fila">
-              <section class="columna9 desp1">
-                <h1>¿Qué nos quieres decir?</h1>
-              </section>
-              <p>Obtendrás respuesta enseguida...</p>
-              <textarea name="pregunta" rows="3" cols="35">Escribe tu pregunta...
-              </textarea>
-              <input type="reset" onclick="alert('El tema se almacenó correctamente')" value="Registrar"/>
-            </li>
-          </ul>
-        </section>
+
+            echo '<section class="respuesta">
+                    <form action="add_respuesta.php?id='.$pregunta.'" method="post">
+                      <h2>PREGUNTA</h2>
+                        <a href="#" data-toggle="tooltip" data-placement="top" title="'.getQueries($dni).'"><img src='.$foto.' width="50px" height="50px"></a>
+                        <h4>'.$nombre.': '.$row['pregunta'].'</h4>';
+            foreach ($rowsr as $rowr) {
+              //Consultar nombre y foto del usuario que ha respondido la pregunta
+              $dnirespuesta=$rowr['usuario'];
+              $resultado=$conexion->prepare("SELECT * FROM Usuario WHERE dni='$dnirespuesta'");
+              $resultado->execute();
+              $filas = $resultado->fetchAll(PDO::FETCH_ASSOC);
+
+              foreach ($filas as $fila) {
+              //Imprimir foto, nombre y respuesta
+                echo '<img src='.$fila['NombreImagen'].' width="30px" height="30px"></a>
+                      <p>'.$fila['Nombre'].' : '.$rowr['topic'].'</p>';
+              }
+            }
+
+          echo'<textarea name="mensaje" placeholder="Escriba una nueva respuesta"></textarea>
+                <input type="submit" value="ENVIAR" id="bot">
+                </form>
+             </section>';
+           echo '
+           <br/>
+           <br/>
+           <br/>
+           <br/>';
+         }
+       }
+        catch ( PDOException $e ) {
+          echo "Error al conectar a la base de datos";
+          die( "Conexión fallida: ".$e-­>getMessage());
+        }
+
+        $conexion="";
+      ?>
+
+
+
+    <script>
+      $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+
+    <section class="pregunta">
+      <form action="add_pregunta.php" method="POST">
+        <h2>Tema nuevo</h2>
+        <textarea name="pregunta" placeholder="Escriba una nueva pregunta"></textarea>
+        <input type="submit" value="ENVIAR" id="boton">
       </form>
     </section>
+    <br>
 
     <footer>
          <a href="como_se_hizo.pdf">Cómo se hizo</a>

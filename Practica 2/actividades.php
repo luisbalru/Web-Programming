@@ -67,7 +67,7 @@
           <?php
             if(!isset($_SESSION['conectado'])){
               echo '<li><a href="#" data-toggle="tooltip" data-placement="top" title="Resgístrate para
-              acceder al foro!>Foro</a></li>';
+              acceder al foro!><a href="#">Foro</a></a></li>';
             }
             else{
               echo '<li><a href="foro.php">Foro</a></li>';
