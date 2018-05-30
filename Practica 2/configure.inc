@@ -4,4 +4,6 @@
 	define("DB_USUARIO","x77145416");
 	define("DB_CONTRASENIA","77145416");
   define("TABLA_CLIENTES","Cliente");
+  define("TABLA_PREGUNTAS","Preguntas");
+  define("TABLA_RESPUESTAS","Respuestas");
 ?>
