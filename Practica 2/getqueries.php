@@ -1,12 +1,14 @@
 <?php
+
   require_once('GestionPreguntas.class.inc');
 
-  $q = intval($_GET['q']);
+  $dni = $_POST['id'];
   $gestionpregunta = new GestionPreguntas();
-  $preguntas = $gestionpregunta->getPregunta($q);
-  foreach($preguntas as $pregunta)
-  {
-    echo '<p>'.$pregunta.'</p> <br>';
+  $preguntas = $gestionpregunta->getPregunta($dni);
+  if(is_array($preguntas)){
+    foreach($preguntas as $pregunta)
+    {
+      echo '<p>'.$pregunta['topic'].'</p> <br>';
+    }
   }
-
 ?>
