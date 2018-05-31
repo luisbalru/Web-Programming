@@ -95,6 +95,18 @@ body{
   vertical-align: top;
 }
 
+.respuesta{
+ border: 1px solid black;
+ padding: 5px;
+ margin-bottom: 5px;
+}
+.respuesta span{
+ width: 250px;
+}
+.respuesta span:hover{
+ cursor: pointer;
+}
+
 
 @media (max-width:720px) {
   h2{
