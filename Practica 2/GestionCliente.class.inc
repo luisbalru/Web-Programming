@@ -64,7 +64,7 @@
           }
           else{
             echo "Contraseña incorrecta";
-            header("Location: index.php?errorAut=Si");
+            header("Location: index.php?errorAut=Si/pass:".$passwd."val:".$valor);
           }
         }
         else{
