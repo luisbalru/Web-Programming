@@ -57,6 +57,24 @@
       }
     }
 
+    public static fuction obtenerPreguntasUsuario($dni)
+    {
+      $conexion = parent::conectar();
+      $sql = "SELECT * FROM Preguntas WHERE usuario=:user";
+      try{
+        $st = $conexion->prepare($sql);
+        $st->bindValue(":user",$dni,PDO::PARAM_STR);
+        $st->execute();
+        $fila = $st->fetchAll(PDO::FETCH_ASSOC);
+        parent::desconectar($conexion);
+        if($fila)
+          return $fila;
+      } catch (PDOException $e) {
+          parent::desconectar($conexion);
+          die("Consulta fallida:".$e->getMessage());
+      }
+    }
+
     public static function obtenerRespuestas($id_query)
     {
       $conexion = parent::conectar();
