@@ -10,6 +10,8 @@
     <link rel="stylesheet" type="text/css" href="tecnicos.css">
     <link rel="stylesheet" type="text/css" href="foro.css">
 
+
+
   </head>
 
   <body>
@@ -75,32 +77,16 @@
     </section>
 
     <script>
-      function showQueries(str){
-        if (str == "") {
-          document.getElementById("txtHint").innerHTML = "";
-          return;
-        }
-        else{
-          xmlhttp = new XMLHttpRequest();
-
-          xmlhttp.onreadystatechange = function() {
-              if (this.readyState == 4 && this.status == 200) {
-                  document.getElementById("txtHint").innerHTML = this.responseText;
-              }
-          };
-          xmlhttp.open("GET","getqueries.php?q="+str,true);
-          xmlhttp.send();
-        }
-      }
-
       $(document).ready(function(){
         $('[data-toggle="tooltip"]').tooltip();
-        });
-
+      });
     </script>
 
     <?php
-      include('getPreguntas.php');
+
+      require_once('getPreguntas.php');
+      getPreguntas();
+
     ?>
 
     <section class="pregunta">
